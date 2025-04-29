@@ -1,6 +1,89 @@
-# Getting Started with Create React App
+# AI Todo App - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is the frontend client for the AI Todo App, built with React.js. The application provides a modern interface for managing todos with AI-powered suggestions and analysis.
+
+## Features
+
+- Create, read, update, and delete todos
+- AI-powered todo suggestions
+- Priority-based todo organization
+- Due date tracking
+- Completed task management
+- Modern, responsive UI
+
+## Tech Stack
+
+- React.js
+- Material-UI
+- Axios for API calls
+- Docker for containerization
+- Nginx for production serving
+
+## Project Structure
+
+```
+client/
+├── src/
+│   ├── components/   # React components
+│   ├── styles/       # Global styles
+│   └── setupProxy.js # API proxy configuration
+├── public/           # Static assets
+├── Dockerfile        # Docker configuration
+└── nginx.conf        # Nginx configuration
+```
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- Docker and Docker Compose
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/jeshu/ai-todo-client.git
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm start
+```
+
+The application will be available at http://localhost:3000
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+This will create a production-ready build in the `build` folder.
+
+### Running with Docker
+
+```bash
+docker build -t ai-todo-client .
+docker run -p 3000:80 ai-todo-client
+```
+
+## API Integration
+
+The frontend communicates with the backend API through:
+- `/api/todos` - Todo management endpoints
+- `/api/ai/suggestions` - AI suggestions
+- `/api/ai/analyze` - Todo analysis
+- `/api/ai/schedule` - Todo scheduling
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 ## Available Scripts
 
